@@ -21,7 +21,7 @@ public class Action {
         if (ok > 4) {
             car.Go();
         }
-        System.out.print(car.CarName() + " : ");
+        System.out.print(car.GetName() + " : ");
         for (int i = 0; i < car.GetPosition(); i++) {
             System.out.print("-");
         }

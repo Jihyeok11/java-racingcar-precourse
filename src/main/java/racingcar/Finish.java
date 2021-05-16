@@ -13,9 +13,9 @@ public class Finish {
             if (max < car.GetPosition()) {
                 max = car.GetPosition();
                 winnerList = new ArrayList<>();
-                winnerList.add(car.CarName());
+                winnerList.add(car.GetName());
             } else if (max == car.GetPosition()) {
-                winnerList.add(car.CarName());
+                winnerList.add(car.GetName());
             }
         }
         String Winners = String.join(", ", winnerList);

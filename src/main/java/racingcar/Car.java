@@ -13,12 +13,11 @@ public class Car {
         this.position += 1;
     }
 
-    public String CarName() {
+    public String GetName() {
         return this.name;
     }
 
     public int GetPosition() {
-
         return this.position;
     }
 
