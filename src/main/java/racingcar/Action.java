@@ -5,12 +5,12 @@ import utils.RandomUtils;
 
 public class Action {
 
-    public static void racing(int num, List carList) {
+    public static void racing(int num, List<Car> carList) {
         for (int i = 0; i < num; i++) {
             System.out.println("실행 결과");
-            for (int j = 0; j < carList.size(); j++) {
+            for (Object car : carList) {
                 int ok = RandomUtils.nextInt(0, 9);
-                CheckGo(ok, (Car) carList.get(j));
+                CheckGo(ok, (Car) car);
             }
             System.out.println();
         }
@@ -21,8 +21,8 @@ public class Action {
         if (ok > 4) {
             car.Go();
         }
-        System.out.print(car.CarName() + " : " );
-        for (int i=0;i<car.GetPosition();i++){
+        System.out.print(car.CarName() + " : ");
+        for (int i = 0; i < car.GetPosition(); i++) {
             System.out.print("-");
         }
         System.out.println();
