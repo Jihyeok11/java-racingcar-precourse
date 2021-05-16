@@ -1,5 +1,6 @@
 package racingcar;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -16,7 +17,11 @@ public class Application {
             return;
         }
         System.out.println("시도할 회수는 몇회인가요?");
-        int count = scanner.nextInt();
-        Action.racing(count, carList);
+        try {
+            int count = scanner.nextInt();
+            Action.racing(count, carList);
+        } catch (InputMismatchException e) {
+            System.out.println("[ERROR] 시도 횟수는 숫자여야 한다.");
+        }
     }
 }
