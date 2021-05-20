@@ -2,6 +2,7 @@ package racingcar;
 
 import views.ErrorView;
 import views.InputView;
+import views.OutputView;
 
 import java.util.InputMismatchException;
 import java.util.List;
@@ -23,7 +24,7 @@ public class Application {
             int count = scanner.nextInt();
             Action.racing(count, carList);
         } catch (InputMismatchException e) {
-            System.out.println("[ERROR] 시도 횟수는 숫자여야 한다.");
+            ErrorView.InputMatchError();
         }
     }
 }

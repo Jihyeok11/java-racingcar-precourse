@@ -8,7 +8,8 @@ public class RacingCars {
     public static List<Car> readyCars(String StringInput) {
 
         String[] playerList = StringInput.split(",");
-        List<Car> playerCars = new ArrayList<>();
+        List<Car> playerCars;
+        playerCars = new ArrayList<>();
         for (String str : playerList) {
             if (str.length() > 5) {
                 return null;
