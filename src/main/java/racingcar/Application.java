@@ -2,7 +2,6 @@ package racingcar;
 
 import views.ErrorView;
 import views.InputView;
-import views.OutputView;
 
 import java.util.InputMismatchException;
 import java.util.List;
