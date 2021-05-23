@@ -7,22 +7,9 @@ import java.util.List;
 
 public class OutputView {
 
-    public static void winner(List<Car> carList) {
+    public static void winner(String Winners) {
         System.out.print("최종 우승자: ");
-        List<String> winnerList = new ArrayList<>();
-        int max = 0;
-        for (Car car : carList) {
-            if (max < car.getPosition()) {
-                max = car.getPosition();
-                winnerList = new ArrayList<>();
-                winnerList.add(car.getName());
-            } else if (max == car.getPosition()) {
-                winnerList.add(car.getName());
-            }
-        }
-        String Winners = String.join(", ", winnerList);
         System.out.println(Winners);
-
     }
 
     public static void checkGo(int ok, Car car) {
@@ -35,4 +22,12 @@ public class OutputView {
         }
         System.out.println();
     }
+    
+    public static void  racingResult(){
+        System.out.println("실행 결과");
+    }
+    public static void enterKey(){
+        System.out.println();
+    }
+
 }

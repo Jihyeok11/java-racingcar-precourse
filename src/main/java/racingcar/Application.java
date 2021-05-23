@@ -1,6 +1,5 @@
 package racingcar;
 
-import views.ErrorView;
 import views.InputView;
 
 import java.util.InputMismatchException;
@@ -15,15 +14,12 @@ public class Application {
 
         String stringInput = InputView.start(scanner);
         List<Car> carList = RacingCars.readyCars(stringInput);
-        if (carList == null) {
-            ErrorView.exceedfive();
-        }
         InputView.asktry();
         try {
             int count = scanner.nextInt();
             Action.racing(count, carList);
         } catch (InputMismatchException e) {
-            ErrorView.inputMatchError();
+            throw new IllegalArgumentException("[ERROR] 시도 횟수는 숫자여야 한다.");
         }
     }
 }
