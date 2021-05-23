@@ -9,15 +9,15 @@ public class Car {
         this.name = name;
     }
 
-    public void Go() {
+    public void go() {
         this.position += 1;
     }
 
-    public String GetName() {
+    public String getName() {
         return this.name;
     }
 
-    public int GetPosition() {
+    public int getPosition() {
         return this.position;
     }
 

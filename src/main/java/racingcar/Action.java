@@ -11,11 +11,11 @@ public class Action {
             System.out.println("실행 결과");
             for (Car car : carList) {
                 int ok = utils.RandomUtils.nextInt(0, 9);
-                OutputView.CheckGo(ok, car);
+                OutputView.checkGo(ok, car);
             }
             System.out.println();
         }
-        OutputView.Winner(carList);
+        OutputView.winner(carList);
     }
 
 }

@@ -13,17 +13,17 @@ public class Application {
         final Scanner scanner = new Scanner(System.in);
 
 
-        String stringInput = InputView.Start(scanner);
+        String stringInput = InputView.start(scanner);
         List<Car> carList = RacingCars.readyCars(stringInput);
         if (carList == null) {
-            ErrorView.Exceedfive();
+            ErrorView.exceedfive();
         }
-        InputView.Try();
+        InputView.asktry();
         try {
             int count = scanner.nextInt();
             Action.racing(count, carList);
         } catch (InputMismatchException e) {
-            ErrorView.InputMatchError();
+            ErrorView.inputMatchError();
         }
     }
 }

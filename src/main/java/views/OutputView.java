@@ -7,17 +7,17 @@ import java.util.List;
 
 public class OutputView {
 
-    public static void Winner(List<Car> carList) {
+    public static void winner(List<Car> carList) {
         System.out.print("최종 우승자: ");
         List<String> winnerList = new ArrayList<>();
         int max = 0;
         for (Car car : carList) {
-            if (max < car.GetPosition()) {
-                max = car.GetPosition();
+            if (max < car.getPosition()) {
+                max = car.getPosition();
                 winnerList = new ArrayList<>();
-                winnerList.add(car.GetName());
-            } else if (max == car.GetPosition()) {
-                winnerList.add(car.GetName());
+                winnerList.add(car.getName());
+            } else if (max == car.getPosition()) {
+                winnerList.add(car.getName());
             }
         }
         String Winners = String.join(", ", winnerList);
@@ -25,12 +25,12 @@ public class OutputView {
 
     }
 
-    public static void CheckGo(int ok, Car car) {
+    public static void checkGo(int ok, Car car) {
         if (ok > 4) {
-            car.Go();
+            car.go();
         }
-        System.out.print(car.GetName() + " : ");
-        for (int i = 0; i < car.GetPosition(); i++) {
+        System.out.print(car.getName() + " : ");
+        for (int i = 0; i < car.getPosition(); i++) {
             System.out.print("-");
         }
         System.out.println();
